@@ -1,0 +1,9 @@
+name: Security-Checker
+on: push
+jobs:
+  security-checker:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: use security checker
+        run: php security-checker.phar security:check ./composer.lock
