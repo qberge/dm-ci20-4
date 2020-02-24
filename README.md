@@ -18,8 +18,23 @@ Docker
 ### Installing
 
 ```
-composer install
+Make Install
+Make Start
 
+OR
+
+php bin/composer.phar install
+php bin/console server:run
+
+Test : 
+    unit:
+       - bin/phpunit tests/Unit
+
+    integration:
+       - bin/phpunit tests/Integration
+
+    functional:
+       - php vendor/bin/behat
 ```
 
 ## Running the tests
