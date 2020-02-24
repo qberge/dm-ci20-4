@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
+      - name: update package with composer
+        run: composer update
       - name: use security checker
         run: php security-checker.phar security:check ./composer.lock
