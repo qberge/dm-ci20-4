@@ -1,10 +1,10 @@
 name: Php-Cs-Fixer
 on: push
 jobs:
-php-cs-fixer:
+ php-cs-fixer:
     runs-on: ubuntu-latest
     container: herloct/php-cs-fixer:latest
     steps:
       - uses: actions/checkout@v2
-      - name:use Php-Cs-Fixer
-        run: php-cs-fixer fix . --dryrun --rules=@Symfony
+      - name: use Php-Cs-Fixer
+        run: php-cs-fixer fix ./ --dry-run --rules=@Symfony
