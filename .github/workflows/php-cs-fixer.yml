@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: use Php-Cs-Fixer
-        run: php-cs-fixer fix ./ --dryrun --rules=@Symfony
+        run: php-cs-fixer fix ./ --dry-run --rules=@Symfony
