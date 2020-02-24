@@ -1,0 +1,15 @@
+name: A workflow for my tests
+on: 
+  schedule:
+    - cron: '0 0 * * 0'
+jobs:
+
+  test-integration:
+    runs-on: ubuntu-latest 
+    steps:
+      - uses : actions/checkout@v2
+      - name : Install dependences
+        run: composer install
+        
+      - name : Run test integration
+        run : bin/phpunit tests/Integration
